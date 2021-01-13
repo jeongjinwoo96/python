@@ -1,0 +1,9 @@
+import re
+import nltk
+from nltk.tokenize import word_tokenize  #단어를 끊어줌
+
+nltk.download('punkt')
+
+print(word_tokenize("Don't stop me now ('cause I'm having a good time)\n\nDon't stop me now (yes, I'm havin' a good time)\n\nI don't want to stop at all"))
+print(len(word_tokenize("Don't stop me now ('cause I'm having a good time)       Don't stop me now (yes, I'm havin' a good time)       I don't want to stop at all"))) #38개
+print(len(re.findall(" ","Don't stop me now ('cause I'm having a good time)       Don't stop me now (yes, I'm havin' a good time)       I don't want to stop at all"))) #띄어쓰기 개수가 38개
